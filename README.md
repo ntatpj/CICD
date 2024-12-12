@@ -13,12 +13,12 @@ step in brief
 2. Now, you can proceed with installing Jenkins
 
     curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
-      /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+      /usr/share/keyrings/jenkins-keyring.asc > /dev/null<br>
     echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
       https://pkg.jenkins.io/debian binary/ | sudo tee \
-      /etc/apt/sources.list.d/jenkins.list > /dev/null
-    sudo apt-get update
-    sudo apt-get install jenkins
+      /etc/apt/sources.list.d/jenkins.list > /dev/null<br>
+    sudo apt-get update<br>
+    sudo apt-get install jenkins<br>
 
 
 3.  IN SG Inbound allow custom TCp 8080 or all traffic
@@ -46,9 +46,9 @@ Wait for the Jenkins to Install suggested plugins
 9. Install the Docker Pipeline plugin in Jenkins:
     Log in to Jenkins.
     Go to Manage Jenkins > Manage Plugins.
-    In the Available tab, search for "Docker Pipeline".
-    Select the plugin and click the Install button.
-    Restart Jenkins after the plugin is installed.
+    In the Available tab, search for "Docker Pipeline".<br>
+    Select the plugin and click the Install button.<br>
+    Restart Jenkins after the plugin is installed.<br>
 ![image](https://github.com/user-attachments/assets/c5c528ff-a453-4276-910d-fb3f2d6e0c0b)
 
 
@@ -58,13 +58,13 @@ Wait for the Jenkins to be restarted.
 **
 Run the below command to Install Docker
 
-sudo apt update
-sudo apt install docker.io
-Grant Jenkins user and Ubuntu user permission to docker deamon.
-sudo su - 
-usermod -aG docker jenkins
-usermod -aG docker ubuntu
-systemctl restart docker
+sudo apt update<br>
+sudo apt install docker.io<br>
+Grant Jenkins user and Ubuntu user permission to docker deamon.<br>
+sudo su - <br>
+usermod -aG docker jenkins<br>
+usermod -aG docker ubuntu<br>
+systemctl restart docker<br>
 
 9. Once you are done with the above steps, it is better to restart Jenkins.
 
